@@ -4,7 +4,7 @@ Magma code for the paper *Bielliptic Shimura curves* $X_0^D(N)$ *with nontrivial
 
 ## Main Files
 
-- `narrow_to_candidates.m`: Here, we narrow our list of candidate bielliptic pairs $(D,N)$ with $D,N > 1$ and $D,N$ relatively prime using the genus bound: if $X_0^D(N)$ is bielliptic, then $g(X_0^D(N)) <= 39$, and the fact that if $X_0^D(N)$ is bielliptic then $X_0^D(1)$ is bielliptic, hyperelliptic, or of genus at most $1$. We then prove that certain candidate pairs have $Aut(X_0^D(N)) = W_0(D,N)$. 
+- `narrow_to_candidates.m`: Here, we narrow our list of candidate bielliptic pairs $(D,N)$ with $D,N > 1$ and $D,N$ relatively prime using the genus bound: if $X_0^D(N)$ is bielliptic, then $g(X_0^D(N)) \leq 39$, and the fact that if $X_0^D(N)$ is bielliptic then $X_0^D(1)$ is bielliptic, hyperelliptic, or of genus at most $1$. We then prove that certain candidate pairs have $\text{Aut}(X_0^D(N)) = W_0(D,N)$. 
 
 - `quot_genus.m`: The main function, quot_genus, computes for a given indefinite rational quaternion discriminant $D$, positive integer $N$ coprime to $D$, and $m \parallel DN$, the genus of the quotient Shimura curve $X_0^D(N)/\langle w_m \rangle$.
 
@@ -44,7 +44,7 @@ Magma code for the paper *Bielliptic Shimura curves* $X_0^D(N)$ *with nontrivial
 
 - `new_no_sporadics_XD0.m`: list of all $73$ pairs $[D,N]$ for which we know that $X_0^D(N)$ has no sporadic points, by virtue of having infinitely many degree $2$ points. This list includes (all but at most $3$) cases where $X_0^D(N)$ is bielliptic with a bielliptic quotient of positive rank over $\mathbb{Q}$. This is computed in `narrow_sporadics.m`.
 
-- `no_sporadic_CM_X1.m`: list of $4$ pairs $[D,N]$ for which we determine that $X_1^D(N)$ has no sporadic CM points, by virtue of $X_0^D(N)$ having infinitely many degree $2$ points and having $\text{a.irr}_\mathbb{Q}(X_1^D(N)) \leq \text{max}(2,\phi(N)) \leq d_\text{CM}(X_1^D(N))$. This is computed in `narrow_sporadics.m`.
+- `no_sporadic_CM_X1.m`: list of $4$ pairs $[D,N]$ for which we determine that $X_1^D(N)$ has no sporadic CM points, by virtue of $X_0^D(N)$ having infinitely many degree $2$ points and having $\text{a.irr}_{\mathbb{Q}}(X_1^D(N)) \leq$ $\text{max}(2,\phi(N)) \leq d_{\text{CM}}(X_1^D(N))$. This is computed in `narrow_sporadics.m`.
 
 - `new_unknowns_X0.m`: narrowed list of $76$ triples $[D,N,d_\text{CM}(X_0^D(N))]$, where $[D,N]$ is such that we remain unsure whether $X_0^D(N)$ has a sporadic point. This is computed in `narrow_sporadics.m`.
 
