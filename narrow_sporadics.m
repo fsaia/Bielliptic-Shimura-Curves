@@ -1,3 +1,8 @@
+// The aim of this code is to use our results on Bielliptic Shimura curves $X_0^D(N)$ to decrease
+// the number of pairs $(D,N)$ for which we remain unsure of whether $X_0^D(N)$ has a sporadic point,
+// following initial work of Saia 2023. 
+
+
 // unknown_sporadics: List of all 391 triples [D,N,dcm(X_0^D(N))] consisting of pairs [D,N] 
 // for which we are unsure whether X_0^D(N) has a sporadic CM point. In other words, this consists 
 // of those (D,N) in the fail_dcm_check list which are not in the no_sporadics list, and such that either 
