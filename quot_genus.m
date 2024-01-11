@@ -192,7 +192,7 @@ end function;
 quot_genus := function(D,N,m)
     g := genus(D,N);
     if m eq 2 then 
-        fixed_number := count_fixed_points(D,N,m,-4,1);
+        fixed_number := count_fixed_points(D,N,m,-4,1) + count_fixed_points(D,N,m,-8,1); 
 
     elif (m mod 4) eq 3 then 
         disc_K := -1*sqfree_part(m); // K = Q(sqrt(-m))
