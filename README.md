@@ -8,9 +8,9 @@ Magma code for the paper *Bielliptic Shimura curves* $X_0^D(N)$ *with nontrivial
 
 - `quot_genus.m`: The main function, quot_genus, computes for a given indefinite rational quaternion discriminant $D$, positive integer $N$ coprime to $D$, and $m \parallel DN$, the genus of the quotient Shimura curve $X_0^D(N)/\langle w_m \rangle$.
 
-- `rationality_by_CM.m`: Here, we aim to prove that certain bielliptic quotients are bielliptic over $\mathbb{Q}$ by showing that the genus one quotient has a rational CM point. 
+- `genus_1_quotients_and_ranks.m`: Using the list of candidate pairs with $N$ squarefree computed in `narrow_to_candidates.m` and the `quot_genus` function in `quot_genus.m` for the genus of an Atkin--Lehner quotient $X_0^D(N)/\langle w_m \rangle$, we determine the genus $1$ quotients of this form. We then determine the rank of the elliptic curve jacobian of each such quotient, using Ribet's isogeny. We also compute the genus $1$ quotients of this form for the candidates with $N$ not squarefree. 
 
-- TO FILL IN: rank computations, etc. 
+- `rationality_by_CM.m`: Here, we aim to prove that certain bielliptic quotients are bielliptic over $\mathbb{Q}$ by showing that the genus one quotient has a rational CM point. 
 
 - `narrow_sporadics.m`: The aim of this code is to use our results on Bielliptic Shimura curves $X_0^D(N)$ to decrease the number of pairs $(D,N)$ for which we remain unsure of whether $X_0^D(N)$ has a sporadic point, following initial work of Saia 2023. 
 
@@ -33,6 +33,14 @@ Magma code for the paper *Bielliptic Shimura curves* $X_0^D(N)$ *with nontrivial
 - `sqfree_candidate_pairs.m` : list of $295$ pairs $(D,N)$ from `candidate_pairs.m` with $N$ squarefree.
 
 - `not_sqfree_candidate_pairs.m` : list of $55$ pairs $(D,N)$ from `candidate_pairs.m` with $N$ not squarefree.
+
+- `genus_1_quotients_N_sqfree.m`: list of all $77$ triples $(D,N,m)$ with $D>1$, $D$ relatively prime to $N$, $N$ squarefree and $m$ a Hall Divisor of $DN$ such that $X_0^D(N)/\langle w_m \rangle$ has genus $1$. This is computed in `genus_1_quotients_and_ranks.m`.
+
+- `genus_1_quotients_N_not_sqfree.m`: list of all $5$ triples $(D,N,m)$ with $D>1$, $D$ relatively prime to $N$, $N$ not squarefree and $m$ a Hall Divisor of $DN$ such that $X_0^D(N)/\langle w_m \rangle$ has genus $1$. This is computed in `genus_1_quotients_and_ranks.m`.
+
+- `rank0.m`: list of all $68$ triples $(D,N,m)$ in `genus_1_quotients_N_sqfree` such that $J(X_0^D(N)/\langle w_m \rangle)$ has rank $0$. This is computed in `genus_1_quotients_and_ranks.m`.
+
+- `rank0.m`: list of all $9$ triples $(D,N,m)$ in `genus_1_quotients_N_sqfree` such that $J(X_0^D(N)/\langle w_m \rangle)$ has rank $1$. This is computed in `genus_1_quotients_and_ranks.m`.
 
 - `to_check_quad_pts.m`: for all the pairs $(D,N)$ for which we are unsure whether $X_0^D(N)$ is bielliptic over $\mathbb{Q}$ (via an Atkin--Lehner involution), we list all of the quadratic CM points on $X_0^D(N)$. This is computed in `rationality_by_CM.m`.
 
