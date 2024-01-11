@@ -10,7 +10,7 @@ Magma code for the paper *Bielliptic Shimura curves* $X_0^D(N)$ *with nontrivial
 
 - `genus_1_quotients_and_ranks.m`: Using the list of candidate pairs with $N$ squarefree computed in `narrow_to_candidates.m` and the `quot_genus` function in `quot_genus.m` for the genus of an Atkin--Lehner quotient $X_0^D(N)/\langle w_m \rangle$, we determine the genus $1$ quotients of this form. We then determine the rank of the elliptic curve jacobian of each such quotient, using Ribet's isogeny. We also compute the genus $1$ quotients of this form for the candidates with $N$ not squarefree. 
 
-- `rationality_by_CM.m`: Here, we aim to prove that certain bielliptic quotients are bielliptic over $\mathbb{Q}$ by showing that the genus one quotient has a rational CM point. 
+- `rationality_by_CM.m`: Here, we aim to prove that certain bielliptic quotients are elliptic over $\mathbb{Q}$ by showing that the genus one quotient has a rational CM point. 
 
 - `narrow_sporadics.m`: The aim of this code is to use our results on Bielliptic Shimura curves $X_0^D(N)$ to decrease the number of pairs $(D,N)$ for which we remain unsure of whether $X_0^D(N)$ has a sporadic point, following initial work of Saia 2023. 
 
