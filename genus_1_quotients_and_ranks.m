@@ -1,8 +1,9 @@
 // Using the list of candidate pairs with N squarefree computed in narrow_to_candidates.m
 // and the quot_genus function in quot_genus.m for the genus of an Atkin--Lehner quotient
-// $X_0^D(N)/\langle w_m \rangle, we determine the genus 1 quotients of this form
+// X_0^D(N)/<w_m>, we determine the genus 1 quotients of this form
 // We then determine the rank of the elliptic curve jacobian of each such quotient,
-// using Ribet's isogeny. 
+// using Ribet's isogeny. We also compute the genus 1 quotients of this form for the 
+// candidates with N not squarefree. 
 
 load "quot_genus.m";
 
