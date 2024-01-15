@@ -1,4 +1,4 @@
-// has_sporadic_CM_X0: list of 306 pairs [D,N] for which we know X_0^D(N) has a sporadic CM point, 
+// has_sporadic_CM_X0: list of 307 pairs [D,N] for which we know X_0^D(N) has a sporadic CM point, 
 // by virtue of having a degree 2 CM point and not having infinitely many deg 2 points
 
 has_sporadic_CM_X0 := [
@@ -184,6 +184,7 @@ has_sporadic_CM_X0 := [
     [ 26, 31 ],
     [ 26, 37 ],
     [ 33, 2 ],
+    [ 33, 4 ],
     [ 33, 5 ],
     [ 33, 7 ],
     [ 33, 8 ],

@@ -42,7 +42,7 @@ delta_eq2 := Sort(((hyp_ell cat biell_delta_eq2) cat g_eq1) cat g_eq0);
 // maybe_delta_eq2: contains 3 pairs for which we are unsure whether
 // delta(X_0^D(N)) = 2. All pairs with delta = 2 are contained in this list or in delta_eq2.
 
-maybe_delta_eq2 := [[6,25],[33,4],[34,7]];
+maybe_delta_eq2 := [[6,25],[34,7]];
 
 
 // has_sporadic_CM_X0: list of pairs [D,N] for which we know X_0^D(N) has a sporadic CM point, 

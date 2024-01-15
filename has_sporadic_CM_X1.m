@@ -1,4 +1,4 @@
-// has_sporadic_CM_X1: list of 75 pairs [D,N] for which we know X_1^D(N) has a sporadic CM point, 
+// has_sporadic_CM_X1: list of 76 pairs [D,N] for which we know X_1^D(N) has a sporadic CM point, 
 // by virtue of having a degree 2 CM point and not having infinitely many deg 2 points
 
 has_sporadic_CM_X1 := [
@@ -11,6 +11,7 @@ has_sporadic_CM_X1 := [
     [ 21, 10 ],
     [ 26, 3 ],
     [ 33, 2 ],
+    [ 33, 4 ],
     [ 33, 5 ],
     [ 33, 7 ],
     [ 33, 10 ],

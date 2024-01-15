@@ -1,4 +1,4 @@
-// new_unknowns_X0: narrowed list of 76 triples [D,N,d_CM(X_0^D(N))], where [D,N] is such that
+// new_unknowns_X0: narrowed list of 75 triples [D,N,d_CM(X_0^D(N))], where [D,N] is such that
 // we remain unsure whether X_0^D(N) has a sporadic point
 
 new_unknowns_X0 := [
@@ -30,7 +30,6 @@ new_unknowns_X0 := [
     [ 22, 35, 4 ],
     [ 22, 51, 4 ],
     [ 26, 21, 4 ],
-    [ 33, 4, 2 ],
     [ 33, 16, 4 ],
     [ 34, 7, 2 ],
     [ 34, 29, 4 ],

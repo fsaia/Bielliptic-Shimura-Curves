@@ -1,5 +1,5 @@
 // new_no_sporadics_XD0: list of all 73 pairs [D,N] for which we know that X_0^D(N) has no sporadic points,
-// by virtue of having infinitely many degree 2 points. This list includes (all but at most 3) cases
+// by virtue of having infinitely many degree 2 points. This list includes (all but at most 2) cases
 // where X_0^D(N) is bielliptic with a bielliptic quotient of positive rank over Q
 
 no_sporadics_XD0 := [[ 6, 1] , [ 6, 5 ] , [ 6, 7 ] , [ 6, 11 ] , [ 6, 13 ] , [6, 17], [ 6, 19 ] , [6,23], [6,29] , 
