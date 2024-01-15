@@ -46,16 +46,16 @@ Magma code for the paper *Bielliptic Shimura curves* $X_0^D(N)$ *with nontrivial
 
 - `rational_CM_pts_info.m`: info on rational CM points on genus $1$ Atkin--Lehner quotients $X_0^D(N)/\langle w_m \rangle$, computed in `rationality_by_CM.m`. 
 
-- `has_sporadic_CM_X0.m`: list of $306$ pairs $[D,N]$ for which we know $X_0^D(N)$ has a sporadic CM point, by virtue of having a degree $2$ CM point and not having infinitely many deg $2$ points. This is computed in `narrow_sporadics.m`.
+- `has_sporadic_CM_X0.m`: list of $307$ pairs $[D,N]$ for which we know $X_0^D(N)$ has a sporadic CM point, by virtue of having a degree $2$ CM point and not having infinitely many deg $2$ points. This is computed in `narrow_sporadics.m`.
 
-- `has_sporadic_CM_X1.m`: list of $75$ pairs $[D,N]$ for which we know $X_1^D(N)$ has a sporadic CM point, by virtue of having a degree $2$ CM point and not having infinitely many deg $2$ points. This is computed in `narrow_sporadics.m`.
+- `has_sporadic_CM_X1.m`: list of $76$ pairs $[D,N]$ for which we know $X_1^D(N)$ has a sporadic CM point, by virtue of having a degree $2$ CM point and not having infinitely many deg $2$ points. This is computed in `narrow_sporadics.m`.
 
 - `new_no_sporadics_XD0.m`: list of all $73$ pairs $[D,N]$ for which we know that $X_0^D(N)$ has no sporadic points, by virtue of having infinitely many degree $2$ points. This list includes (all but at most $3$) cases where $X_0^D(N)$ is bielliptic with a bielliptic quotient of positive rank over $\mathbb{Q}$. This is computed in `narrow_sporadics.m`.
 
 - `no_sporadic_CM_X1.m`: list of $4$ pairs $[D,N]$ for which we determine that $X_1^D(N)$ has no sporadic CM points, by virtue of $X_0^D(N)$ having infinitely many degree $2$ points and having $\text{a.irr}(X_1^D(N)) \leq \text{max}(2,\phi(N)) \leq d_{\text{CM}}(X_1^D(N))$. This is computed in `narrow_sporadics.m`.
 
-- `new_unknowns_X0.m`: narrowed list of $76$ triples $[D,N,d_\text{CM}(X_0^D(N))]$, where $[D,N]$ is such that we remain unsure whether $X_0^D(N)$ has a sporadic point. This is computed in `narrow_sporadics.m`.
+- `new_unknowns_X0.m`: narrowed list of $75$ triples $[D,N,d_\text{CM}(X_0^D(N))]$, where $[D,N]$ is such that we remain unsure whether $X_0^D(N)$ has a sporadic point. This is computed in `narrow_sporadics.m`.
 
-- `new_unknowns_X1.m`: narrowed list of $323$ triples $[D,N,d_\text{CM}(X_1^D(N))]$, where $[D,N]$ is such that we remain unsure whether $X_1^D(N)$ has a sporadic point. This is computed in `narrow_sporadics.m`.
+- `new_unknowns_X1.m`: narrowed list of $322$ triples $[D,N,d_\text{CM}(X_1^D(N))]$, where $[D,N]$ is such that we remain unsure whether $X_1^D(N)$ has a sporadic point. This is computed in `narrow_sporadics.m`.
 
 
