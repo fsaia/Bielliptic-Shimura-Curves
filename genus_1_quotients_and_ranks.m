@@ -83,7 +83,7 @@ rank1 := [];
 for pair in sqfree_candidate_pairs do
     D := pair[1]; N := pair[2];
     for m in HallDivisors(D*N) do
-        if quot_genus(D,N,m) eq 1 then
+        if quot_genus(D,N,[m]) eq 1 then
             Append(~genus_1_quotients_N_sqfree,[D,N,m]);
             if IsEven(#PrimeFactors(GCD(D,m))) then
                 V1 := Jplus(D*N,m);
@@ -106,7 +106,7 @@ end for;
 for pair in not_sqfree_candidate_pairs do
     D := pair[1]; N := pair[2];
     for m in HallDivisors(D*N) do
-        if quot_genus(D,N,m) eq 1 then
+        if quot_genus(D,N,[m]) eq 1 then
             Append(~genus_1_quotients_N_not_sqfree,[D,N,m]);
         end if;
     end for;

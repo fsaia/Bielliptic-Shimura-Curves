@@ -185,28 +185,37 @@ end function;
 
 
 // quot_genus
-// given quaternion discriminant D, N coprime to D, and m || DN, computes
-// the genus of X_0^D(N)/<w_m>
+// given quaternion discriminant D, N coprime to D, and W a subgroup of W_0(D,N) given
+// by a list [m_1, ..., m_n] of all m such that w_m in w_0(D,N), computes
+// the genus of X_0^D(N)/W
 // by Riemann--Hurwitz, also see Ogg83 eqn 3
 
-quot_genus := function(D,N,m)
-    g := genus(D,N);
-    if m eq 2 then 
-        fixed_number := count_fixed_points(D,N,m,-4,1) + count_fixed_points(D,N,m,-8,1); 
+quot_genus := function(D,N,W)
 
-    elif (m mod 4) eq 3 then 
-        disc_K := -1*sqfree_part(m); // K = Q(sqrt(-m))
-        _,f := IsSquare(Integers()!(m/sqfree_part(m)));
-        fixed_number := count_fixed_points(D,N,m,disc_K,f) + count_fixed_points(D,N,m,disc_K,2*f);
+    g := genus(D,N); // genus of the top curve
+    deg := #W; // degree of quotient map
 
-    else
-        disc_K := -4*(sqfree_part(m)); // K = Q(sqrt(-m))
-        _,f := IsSquare(Integers()!(m/sqfree_part(m)));
-        fixed_number := count_fixed_points(D,N,m,disc_K,f); 
+    fixed_number := 0; // initializing fixed point count
 
-    end if;
+    for m in [m : m in W | m ne 1] do
+        
+        if m eq 2 then 
+            fixed_number := fixed_number + count_fixed_points(D,N,m,-4,1) + count_fixed_points(D,N,m,-8,1); 
 
-    return (1/4)*(2*g+2 - fixed_number);
+        elif (m mod 4) eq 3 then 
+            disc_K := -1*sqfree_part(m); // K = Q(sqrt(-m))
+            _,f := IsSquare(Integers()!(m/sqfree_part(m)));
+            fixed_number := fixed_number + count_fixed_points(D,N,m,disc_K,f) + count_fixed_points(D,N,m,disc_K,2*f);
+
+        else
+            disc_K := -4*(sqfree_part(m)); // K = Q(sqrt(-m))
+            _,f := IsSquare(Integers()!(m/sqfree_part(m)));
+            fixed_number := fixed_number + count_fixed_points(D,N,m,disc_K,f); 
+
+        end if;
+    end for;
+
+    return (1/(2*deg))*(2*g-2 - fixed_number)+1;
 end function;
 
 

@@ -34,6 +34,8 @@
 
 CM_points_XD0_prime_power := function(D_Fact, f, d_K, l, a)
 
+    assert a ge 0; 
+
     L := Valuation(f,l); // "level" of d in G_{K,l,f_0}
     f_0 := IntegerRing()!(f/l^L); // coprime to l part of conductor f
 
@@ -197,7 +199,7 @@ CM_points_XD0_prime_power := function(D_Fact, f, d_K, l, a)
             if symbol_l_K ne 0 then 
 
                 // Type V_1
-                if L ge 2 then 
+                if (L ge 2) and (a ge 2) then 
                     Append(~points[1],[2^(a-2)*f,1,ClassNumber((2^(a-2)*f)^2*d_K),2^b]);
                 end if;
 
@@ -248,7 +250,7 @@ CM_points_XD0_prime_power := function(D_Fact, f, d_K, l, a)
                 end for;
 
                 // Type VI_1
-                if L eq 1 then
+                if (L eq 1) and (a ge 2) then
                     Append(~points[1],[2^(a-2)*f,1,ClassNumber((2^(a-2)*f)^2*d_K),2^b]);
                 end if; 
 
@@ -299,7 +301,7 @@ CM_points_XD0_prime_power := function(D_Fact, f, d_K, l, a)
                 end for;
 
                 // Type VI_1
-                if L eq 1 then
+                if (L eq 1) and (a ge 2) then
                     Append(~points[1],[2^(a-2)*f,1,ClassNumber((2^(a-2)*f)^2*d_K),2^b]);
                 end if; 
 
@@ -424,7 +426,7 @@ CM_points_XD0_prime_power := function(D_Fact, f, d_K, l, a)
 
             end if; 
              
-            if (a ge L+1) and (L ge 1) and (symbol_l_K(d_K,l) eq 1) then
+            if (a ge L+1) and (L ge 1) and (symbol_l_K eq 1) then
 
                 // Type IX
                 Append(~points[2],[l^(Max(a-2*L,0))*f,1,2*ClassNumber((l^(Max(a-2*L,0))*f)^2*d_K),2^b*((l-2)*l^(Min(L,a-L)-1))]);
@@ -444,7 +446,7 @@ CM_points_XD0_prime_power := function(D_Fact, f, d_K, l, a)
             if symbol_l_K ne 0 then 
 
                 // Type V_1
-                if L ge 2 then 
+                if (L ge 2) and (a ge 2) then 
                     Append(~points[2],[2^(a-2)*f,1,2*ClassNumber((2^(a-2)*f)^2*d_K),2^b]);
                 end if;
 
@@ -542,7 +544,7 @@ CM_points_XD0_prime_power := function(D_Fact, f, d_K, l, a)
                 end for;
 
                 // Type VI_1
-                if L eq 1 then
+                if (L eq 1) and (a ge 2) then
                     Append(~points[2],[2^(a-2)*f,1,2*ClassNumber((2^(a-2)*f)^2*d_K),2^b]);
                 end if; 
 
@@ -638,11 +640,11 @@ CM_points_XD0 := function(D, f, d_K, N)
 
         // Case all primes dividing D ramified in K
         if D_check eq true then 
-            return [*[f,1,ClassNumber(f^2*d_K),2^b], [] *];
+            return [*[[f,1,ClassNumber(f^2*d_K),2^b]], [] *];
 
         // Case some prime dividing D inert in K
         elif D_check eq false then 
-            return [*[], [f,1,2*ClassNumber(f^2*d_K),2^b] *];
+            return [*[], [[f,1,2*ClassNumber(f^2*d_K),2^b]] *];
         end if; 
 
     // N > 1 case

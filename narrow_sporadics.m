@@ -12,6 +12,8 @@ load "unknown_sporadics.m";
 
 load "shimura_curve_CM_locus.m";
 
+load "no_sporadics_XD0.m";
+
 // extra_unknowns_X1: list of 10 pairs [D,N] which are not in unknown_sporadics and
 // for which we are unsure whether X_1^D(N) has a sporadic CM point. 
 extra_unknowns_X1 := [ [ 6, 5 ],
@@ -39,12 +41,6 @@ biell_delta_eq2 := [[6,17],[6,23],[6,41],[6,71],[10,13],[10,17],[10,29],[22,7],[
 delta_eq2 := Sort(((hyp_ell cat biell_delta_eq2) cat g_eq1) cat g_eq0);
 
 
-// maybe_delta_eq2: contains 3 pairs for which we are unsure whether
-// delta(X_0^D(N)) = 2. All pairs with delta = 2 are contained in this list or in delta_eq2.
-
-maybe_delta_eq2 := [[6,25],[34,7]];
-
-
 // has_sporadic_CM_X0: list of pairs [D,N] for which we know X_0^D(N) has a sporadic CM point, 
 // by virtue of having a degree 2 CM point and not having infinitely many deg 2 points
 
@@ -53,8 +49,10 @@ has_sporadic_CM_X0 := [];
 for triple in unknown_sporadics do
 	if triple[3] eq 2 then
 		pair := [triple[1],triple[2]];
-		if not ((pair in delta_eq2) or (pair in maybe_delta_eq2)) then 
+		if not (pair in delta_eq2) then 
 			Append(~has_sporadic_CM_X0,pair);
+		else
+			Append(~no_sporadics_XD0,pair);
 		end if;
 	end if;
 end for; 
@@ -62,6 +60,12 @@ end for;
 
 // SetOutputFile("has_sporadic_CM_X0.m");
 // print has_sporadic_CM_X0;
+// UnsetOutputFile();
+
+Sort(~no_sporadics_XD0);
+
+// SetOutputFile("new_no_sporadics_XD0.m");
+// print no_sporadics_XD0;
 // UnsetOutputFile();
 
 
@@ -114,7 +118,7 @@ for triple in unknown_sporadics do
 	dcm := d_CM_XD1(D,N)[4];
 	if dcm eq 2 then
 		pair := [D,N];
-		if not ((pair in delta_eq2) or (pair in maybe_delta_eq2)) then 
+		if not (pair in delta_eq2) then 
 			Append(~has_sporadic_CM_X1,pair);
 		end if;
 	end if;
@@ -125,7 +129,7 @@ for pair in extra_unknowns_X1 do
 	N := pair[2];
 	dcm := d_CM_XD1(D,N)[4];
 	if dcm eq 2 then
-		if not ((pair in delta_eq2) or (pair in maybe_delta_eq2)) then 
+		if not (pair in delta_eq2) then 
 			Append(~has_sporadic_CM_X1,pair);
 		end if;
 	end if;
@@ -148,14 +152,14 @@ new_unknowns_X1 := [];
 for triple in unknown_sporadics do
 	pair := [triple[1],triple[2]];
 	dcm := d_CM_XD1(pair[1],pair[2])[4];
-	if (not (pair in has_sporadic_CM_X1)) and (not pair in no_sporadic_CM_X1) then
+	if (not (pair in has_sporadic_CM_X1)) and (not (pair in no_sporadic_CM_X1)) then
 		Append(~new_unknowns_X1,[pair[1],pair[2],dcm]);
 	end if;
 end for;
 
 for pair in extra_unknowns_X1 do 
 	dcm := d_CM_XD1(pair[1],pair[2])[4];
-	if (not (pair in has_sporadic_CM_X1)) and (not pair in no_sporadic_CM_X1) then
+	if (not (pair in has_sporadic_CM_X1)) and (not (pair in no_sporadic_CM_X1)) then
 		Append(~new_unknowns_X1,[pair[1],pair[2],dcm]);
 	end if;
 end for;

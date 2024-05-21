@@ -1,4 +1,4 @@
-// not_sqfree_candidate_pairs : list of 55 pairs (D,N) with D,N>1, (D,N) = 1, and N not squarefree so that X_0^D(N) 
+// not_sqfree_candidate_pairs : list of 56 pairs (D,N) with D,N>1, (D,N) = 1, and N not squarefree so that X_0^D(N) 
 // is possible bielliptic, given that X_0^D(1) is of genus at most 2 or is hyperelliptic or bielliptic
 // and that g(X_0^D(N)) is at most 39. 
 
@@ -55,6 +55,7 @@ not_sqfree_candidate_pairs := [
     [ 69, 4 ],
     [ 74, 9 ],
     [ 77, 4 ],
+    [ 85, 4 ],
     [ 87, 4 ],
     [ 95, 4 ],
     [ 111, 4 ]

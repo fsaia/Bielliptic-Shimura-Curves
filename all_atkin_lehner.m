@@ -1,4 +1,4 @@
-// all_atkin_lehner : list of 269 candidate pairs (D,N) for which we know that full automorphism
+// all_atkin_lehner : list of 275 candidate pairs (D,N) for which we know that full automorphism
 // group of X_0^D(N) is the Atkin--Lehner group W_0(D,N)
 
 all_atkin_lehner := [
@@ -241,6 +241,8 @@ all_atkin_lehner := [
     [ 77, 3 ],
     [ 82, 3 ],
     [ 82, 5 ],
+    [ 85, 2 ],
+    [ 85, 3 ],
     [ 86, 3 ],
     [ 86, 5 ],
     [ 86, 7 ],
@@ -255,6 +257,8 @@ all_atkin_lehner := [
     [ 106, 5 ],
     [ 111, 2 ],
     [ 111, 5 ],
+    [ 115, 2 ],
+    [ 115, 3 ],
     [ 118, 3 ],
     [ 118, 5 ],
     [ 119, 2 ],
@@ -269,6 +273,8 @@ all_atkin_lehner := [
     [ 146, 5 ],
     [ 159, 2 ],
     [ 166, 3 ],
+    [ 178, 3 ],
     [ 194, 3 ],
+    [ 202, 3 ],
     [ 206, 3 ]
 ];

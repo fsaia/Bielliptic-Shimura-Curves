@@ -1,4 +1,4 @@
-// candidate_pairs : list of 350 pairs (D,N) with D,N>1 and (D,N) = 1 so that X_0^D(N) 
+// candidate_pairs : list of 357 pairs (D,N) with D,N>1 and (D,N) = 1 so that X_0^D(N) 
 // is possible bielliptic, given that X_0^D(1) is of genus at most 2 or is hyperelliptic or bielliptic
 // and that g(X_0^D(N)) is at most 39. 
 
@@ -317,6 +317,9 @@ candidate_pairs := [*
     [ 82, 3 ],
     [ 82, 5 ],
     [ 82, 7 ],
+    [ 85, 2 ],
+    [ 85, 3 ],
+    [ 85, 4 ],
     [ 86, 3 ],
     [ 86, 5 ],
     [ 86, 7 ],
@@ -336,6 +339,8 @@ candidate_pairs := [*
     [ 111, 2 ],
     [ 111, 4 ],
     [ 111, 5 ],
+    [ 115, 2 ],
+    [ 115, 3 ],
     [ 118, 3 ],
     [ 118, 5 ],
     [ 118, 7 ],
@@ -351,6 +356,8 @@ candidate_pairs := [*
     [ 146, 5 ],
     [ 159, 2 ],
     [ 166, 3 ],
+    [ 178, 3 ],
     [ 194, 3 ],
+    [ 202, 3 ],
     [ 206, 3 ]
 *];

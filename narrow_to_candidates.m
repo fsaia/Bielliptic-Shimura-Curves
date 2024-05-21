@@ -76,9 +76,10 @@ genus := function(D,N)
 end function; 
 
 
-// possible_D_list : list of indefinite rational quaternion discriminants D such that X_0^D(1) has genus at most 1 or is hyperelliptic or bielliptic
+// possible_D_list : list of indefinite rational quaternion discriminants D such that X_0^D(1) has 
+// genus at most 1, is geometrically hyperelliptic or is geometrically bielliptic
 
-possible_D_list := [6,10,14,15,21,22,26,33,34,35,38,39,46,51,55,57,58,62,65,69,74,77, 82,86,87,94,95,106,111,118,119,122,129,134,143,146,159,166,194,206,210,215,314,330,390,510,546];
+possible_D_list := [6,10,14,15,21,22,26,33,34,35,38,39,46,51,55,57,58,62,65,69,74,77, 82,85,86,87,94,95,106,111,115,118,119,122,129,134,143,146,159,166,178,194,202,206,210,215,314,330,390,462,510,546];
 
 
 // prod_bound : crude bound on DN for X_0^D(N) with genus <= 39
