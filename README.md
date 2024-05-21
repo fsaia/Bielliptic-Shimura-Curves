@@ -21,7 +21,7 @@ Magma code for the paper *Bielliptic Shimura curves* $X_0^D(N)$ *with nontrivial
 
 - `shimura_curve_CM_locus.m`: The aim of this code, from the paper *CM points on Shimura curves via QM-equivariant isogeny volcanoes* (Saia 2024)  is to compute the $\Delta$-CM locus on $X_0^D(N)$ for any imaginary quadratic discriminant $\Delta$ and positive integer $N$ coprime to a given quaternion discriminant $D$. This is done via the QM-equivariant isogeny volcano approach of the referenced paper of Saia in the $D>1$ case, and of work of Clark--Saia in the $D=1$ case. In particular, this file contains code to enumerate all CM points of a specified discriminant $\Delta$ with all possible residue fields up to isomorphism for one of these Shimura curves. This is used in quadratic CM point computations in `rationality_by_CM` and least degrees of CM points computations in `narrow_sporadics.m`.
 
-- `unknown_sporadics.m`: List of all $391$ triples $[D,N,d_\text{CM}(X_0^D(N))]$ consisting of pairs $[D,N]$ for which we are unsure whether $X_0^D(N)$ has a sporadic CM point following work of Saia 2024. This list is used in `narrow_sporadics.m`, where we try to improve on the results of Saia 2023 by decreasing the number of unknowns. 
+- `unknown_sporadics.m`: List of all $329$ triples $[D,N,d_\text{CM}(X_0^D(N))]$ consisting of pairs $[D,N]$ for which we are unsure whether $X_0^D(N)$ has a sporadic CM point following work of Saia 2024. This list is used in `narrow_sporadics.m`, where we try to improve on the results of Saia 2024 by decreasing the number of unknowns. 
 
 
 ## Computed Lists 
