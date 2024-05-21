@@ -1,5 +1,7 @@
 # Bielliptic-Shimura-Curves
-Magma code for the paper *Bielliptic Shimura curves* $X_0^D(N)$ *with nontrivial level* by Oana Padurariu and Frederick Saia. The contents, sorted roughly in order of use in the paper, are as follows: 
+Magma code for the paper *Bielliptic Shimura curves* $X_0^D(N)$ *with nontrivial level* by Oana Padurariu and Frederick Saia. 
+
+Total computation time (< 3 minutes with a 2020 Apple M1 chip) and memory requirements for all code here are not significant. The contents of this repository, sorted roughly in order of use in the paper, are as follows: 
 
 
 ## Main Files
