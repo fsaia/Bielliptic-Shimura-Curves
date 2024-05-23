@@ -42,7 +42,7 @@ Total computation time ($< 3$ minutes with a 2020 Apple M1 chip) and memory usag
 
 - `rank0.m`: list of all $68$ triples $(D,N,m)$ in `genus_1_quotients_N_sqfree` such that $J(X_0^D(N)/\langle w_m \rangle)$ has rank $0$. This is computed in `genus_1_quotients_and_ranks.m`.
 
-- `rank0.m`: list of all $9$ triples $(D,N,m)$ in `genus_1_quotients_N_sqfree` such that $J(X_0^D(N)/\langle w_m \rangle)$ has rank $1$. This is computed in `genus_1_quotients_and_ranks.m`.
+- `rank1.m`: list of all $9$ triples $(D,N,m)$ in `genus_1_quotients_N_sqfree` such that $J(X_0^D(N)/\langle w_m \rangle)$ has rank $1$. This is computed in `genus_1_quotients_and_ranks.m`.
 
 - `to_check_quad_pts.m`: for all the pairs $(D,N)$ for which we are unsure whether $X_0^D(N)$ is bielliptic over $\mathbb{Q}$ (via an Atkin--Lehner involution), we list all of the quadratic CM points on $X_0^D(N)$. This is computed in `rationality_by_CM.m`.
 
