@@ -12,7 +12,18 @@ load "unknown_sporadics.m";
 
 load "shimura_curve_CM_locus.m";
 
-load "no_sporadics_XD0.m";
+// no_sporadics_XD0: initial list of 64 pairs [D,N] for which we know that X_0^D(N) has no sporadic points,
+// by virtue of having infinitely many degree 2 points. This list comes from Saia24
+
+no_sporadics_XD0 := [[ 6, 1] , [ 6, 5 ] , [ 6, 7 ] , [ 6, 11 ] , [ 6, 13 ] , [ 6, 19 ] , [6,29] , 
+	[ 6, 31] , [ 6, 37 ] , [ 10, 1 ] , [ 10, 3 ] , [ 10, 7 ] , [ 10, 11 ] , [10,23] ,[14,1],
+	[14,5], [ 15, 1] ,[15,2], [ 21, 1 ] , [ 22, 1 ] ,[22,3], [ 22, 5] , [ 26, 1 ] , [ 33, 1 ] , 
+	[ 34, 1 ] , [ 35, 1 ] , [ 38, 1 ] , [39,1] , [ 39, 2] , [ 46, 1 ] , [ 51, 1 ] , [ 55, 1 ] , 
+	[ 57, 1 ] , [ 58, 1 ] , [62,1] , [ 65, 1] , [ 69, 1 ] , [ 74, 1 ] , [ 77, 1 ] , [ 82, 1 ] , 
+	[ 86, 1 ] , [87,1] , [ 94, 1] , [ 95, 1 ] , [ 106, 1 ] , [ 111, 1 ] , [ 118, 1 ] ,[119,1], 
+	[ 122, 1 ] , [129,1] , [ 134, 1] , [ 143, 1 ] , [146,1], [159,1], [ 166, 1 ] ,[194,1],[206,1], 
+	[ 210, 1 ] , [ 215, 1 ] , [ 314, 1 ] , [330,1] , [ 390, 1] , [ 510, 1 ] ,[546,1]]; 
+
 
 // extra_unknowns_X1: list of 10 pairs [D,N] which are not in unknown_sporadics and
 // for which we are unsure whether X_1^D(N) has a sporadic CM point. 
