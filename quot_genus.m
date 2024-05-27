@@ -1,7 +1,6 @@
-// quot_genus.m
-// the main function, quot_genus, computes for a given indefinite rational 
-// quaternion discriminant D, positive integer N coprime to D, and Hall divisor m
-// of DN, the genus of the quotient Shimura curve X_0^D(N)/<w_m>
+// The main function, quot_genus, computes for a given indefinite rational quaternion discriminant $D$, 
+// positive integer $N$ coprime to $D$, and $W \subseteq W_0(D,N)$ a subgroup of the full group of Atkin--Lehner 
+// involutions on $X_0^D(N)$, the genus of the quotient Shimura curve $X_0^D(N)/W$.
 
 
 // phi_from_fact
