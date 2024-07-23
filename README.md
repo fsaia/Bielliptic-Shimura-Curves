@@ -18,12 +18,8 @@ Total computation time ($< 3$ minutes with a 2020 Apple M1 chip) and memory usag
 
 - `generating_trigonal_candidates.m`: Here, we narrow our list of candidate geometrically trigonal pairs $(D,N)$ with $D,N > 1$ and $D,N$ relatively prime using the genus bound given by Abramovich's gonality bound: if $X_0^D(N)$ is geometrically trigonal, then $g(X_0^D(N)) \leq 29$.
 
-- `trigonal_candidate_pairs.m`: All $455$ geometrically trigonal candidate pairs $(D,N)$, i.e., pairs $(D,N)$ with $\text{gcd}(D,N) = 1$ and $D>1$ such that $g(D,N) \leq 29$. 
-
-- `trigonal_checks.m`: In this code, we narrow down the pairs in `trigonal_candidate_pairs.m` using the two results of Schweizer on geometrically trigonal curves. 
- 
-- `narrowed_trigonal_candidates.m`: List of all 6 relatively prime pairs $(D,N)$ with $D>1$ with $2 \leq g(X_0^D(N)) \leq 29$ (Abramovich bound required to be trigonal), with $g(X_0^D(N)) \not\equiv 1 \pmod{4}$ (Schweizer Corollary 3.5) and with $X_0^D(N)$ having the required fixed point counts for all Atkin--Lehner involutions (via Schweizer Lemma 3.4). 
-
+- `trigonal_checks.m`: In this code, we narrow down the pairs in `trigonal_candidate_pairs.m` using the two results of Schweizer on geometrically trigonal curves.
+  
 
 ## Required Files
 
@@ -68,4 +64,7 @@ Total computation time ($< 3$ minutes with a 2020 Apple M1 chip) and memory usag
 
 - `new_unknowns_X1.m`: narrowed list of $263$ triples $[D,N,d_\text{CM}(X_1^D(N))]$, where $[D,N]$ is such that we remain unsure whether $X_1^D(N)$ has a sporadic point. This is computed in `narrow_sporadics.m`.
 
+- `trigonal_candidate_pairs.m`: All $455$ geometrically trigonal candidate pairs $(D,N)$, i.e., pairs $(D,N)$ with $\text{gcd}(D,N) = 1$ and $D>1$ such that $g(D,N) \leq 29$. 
+
+- `narrowed_trigonal_candidates.m`: List of all 6 relatively prime pairs $(D,N)$ with $D>1$ with $2 \leq g(X_0^D(N)) \leq 29$ (Abramovich bound required to be trigonal), with $g(X_0^D(N)) \not\equiv 1 \pmod{4}$ (Schweizer Corollary 3.5) and with $X_0^D(N)$ having the required fixed point counts for all Atkin--Lehner involutions (via Schweizer Lemma 3.4). 
 
